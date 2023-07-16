@@ -174,7 +174,9 @@ function displayMultiplyQuestion(operand1, operand2) {
 
 function displayDivisionQuestion(operand1, operand2) {
 
-    document.getElementById('operand1').textContent = operand1;
+    /*                                       if operand1 is > operand2 return operand1 else return operand2 */
+    document.getElementById('operand1').textContent = operand1 * operand2;
+    /*                                         rotate return values to return lowest number */
     document.getElementById('operand2').textContent = operand2;
     document.getElementById('operator').textContent = "/";
     
