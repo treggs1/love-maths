@@ -17,6 +17,15 @@ document.addEventListener("DOMContentLoaded", function() {
         })
     }
 
+    // if enter is pressed in answer-box the checkAnswer
+    document.getElementById("answer-box").addEventListener("keydown", function(event) {
+
+        if (event.key === "Enter") {
+            checkAnswer();
+        }
+
+    })
+
     runGame("addition");
 
 })
@@ -27,6 +36,11 @@ document.addEventListener("DOMContentLoaded", function() {
  */
 
 function runGame(gameType) {
+
+    // clears answer-box when runGame is called
+    document.getElementById("answer-box").value = "";
+    // focus answer-box so cursor is starts in answer-box when runGame is called
+    document.getElementById("answer-box").focus();
 
     // creates two random numbers between 1 and 25
     let num1 = Math.floor(Math.random() * 25) + 1;
